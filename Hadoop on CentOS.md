@@ -146,18 +146,18 @@ windows	1
    # ssh localhost date
    Fri Aug  2 19:58:20 CST 2019
    ```
-- 配置核心站点文件
+- 修改核心站点配置文件
    - 用`vim`打开核心站点文件
    ```
    # vim /usr/local/hadoop/etc/hadoop/core-site.xml
    ```
    - 把
-   ```xml
+   ```
     <configuration>
     </configuration>
    ```
    修改为
-   ```xml
+   ```
    <configuration>
       <property>
          <name>fs.defaultFS</name>
@@ -165,3 +165,4 @@ windows	1
       </property>
    </configuration>
    ```
+- 修改分布式站点配置文件
