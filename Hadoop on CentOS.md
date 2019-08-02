@@ -184,3 +184,24 @@ windows	1
       </property>
    </configuration>
    ```
+- 配置完成后，执行NameNode的格式化
+```
+# hdfs namenode -format
+```
+如配置成功，会在命令窗口中看到`successfully formatted`和`Exitting with status 0`的提示
+
+- 开启NameNode和DataNode进程
+```
+# start-dfs.sh
+```
+若出现如下 SSH 的提示 “Are you sure you want to continue connecting”，输入 yes 即可。
+
+- 启动后命令`jps`查看进程，查看是否启动成功，如成功会显示：
+```
+# jps
+20304 Jps
+20019 DataNode
+20180 SecondaryNameNode
+19898 NameNode
+```
+成功启动后，可以访问 Web 界面 http://localhost:50070 查看 NameNode 和 Datanode 信息，还可以在线查看 HDFS 中的文件。
