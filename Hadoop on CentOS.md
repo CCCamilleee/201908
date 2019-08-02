@@ -1,3 +1,4 @@
+[toc]
 # hadoop-on-CentOS
 文档中所有安装包均已提前下载，一切CentOS系统内操作都在root用户下进行
 
