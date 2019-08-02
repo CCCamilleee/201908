@@ -158,11 +158,8 @@ windows	1
    ```
    修改为
    ```
-      <configuration>
-         <property>
-            <name>fs.defaultFS</name>
-            <value>hdfs://localhost:9000</value>
-         </property>
-      </configuration>
+   <configuration>
+      <property>
+         <name>fs.defaultFS</name>
    ```
 - 修改分布式站点配置文件
