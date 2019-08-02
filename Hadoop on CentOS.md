@@ -147,7 +147,7 @@ windows	1
    Fri Aug  2 19:58:20 CST 2019
    ```
 - 修改核心站点配置文件
-   - 用`vim`打开核心站点文件
+   - 用`vim`打开核心站点配置文件
    ```
    # vim /usr/local/hadoop/etc/hadoop/core-site.xml
    ```
@@ -166,3 +166,21 @@ windows	1
    </configuration>
    ```
 - 修改分布式站点配置文件
+   - 用`vim`打开分布式站点配置文件
+   ```
+   # vim /usr/local/hadoop/etc/hadoop/hdfs-site.xml
+   ```
+   - 把
+   ```
+    <configuration>
+    </configuration>
+   ```
+   修改为
+   ```
+   <configuration>
+      <property>
+         <name>dfs.replication</name>
+         <value>1</value>
+      </property>
+   </configuration>
+   ```
