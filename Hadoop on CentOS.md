@@ -205,3 +205,77 @@ windows	1
 19898 NameNode
 ```
 成功启动后，可以访问 Web 界面 http://localhost:50070 查看 NameNode 和 Datanode 信息，还可以在线查看 HDFS 中的文件。
+或通过以下命令查看端口情况
+```
+# lsof -i:9000
+COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+java    19898 root  201u  IPv4  83229      0t0  TCP localhost:cslistener (LISTEN)
+java    19898 root  211u  IPv4  84337      0t0  TCP localhost:cslistener->localhost:42352 (ESTABLISHED)
+java    20019 root  224u  IPv4  84335      0t0  TCP localhost:42352->localhost:cslistener (ESTABLISHED)
+
+# lsof -i:50070
+COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+java    19898 root  183u  IPv4  83213      0t0  TCP *:50070 (LISTEN)
+```
+- 停止进程
+```
+# stop-dfs.sh
+```
+
+### 启动YARN
+- 修改配置文件 mapred-site.xml，需要先复制文件再进行修改
+```
+# cd /usr/local/hadoop/etc/hadoop/
+# cp mapred-site.xml.template mapred-site.xml
+# vim mapred-site.xml
+```
+把
+```
+<configuration>
+</configuration>
+```
+修改为
+```
+<configuration>
+   <property>
+      <name>mapreduce.framework.name</name>
+      <value>yarn</value>
+   </property>
+</configuration>
+```
+
+- 修改配置文件 yarn-site.xml，在同一路径下进行操作
+```
+# vim yarn-site.xml
+```
+把
+```
+<configuration>
+</configuration>
+```
+修改为
+```
+<configuration>
+   <property>
+      <name>yarn.nodemanager.aux-services</name>
+      <value>mapreduce_shuffle</value>
+   </property>
+</configuration>
+```
+- 启动YARN
+```
+# start-dfs.sh
+# start-yarn.sh
+```
+同样可以通过`jps`命令查看进程：
+```
+# jps
+21154 DataNode
+21650 NodeManager
+21029 NameNode
+21320 SecondaryNameNode
+21786 Jps
+21471 ResourceManager
+```
+可以看到比未开启YARN的时候多出了`NodeManager`和`ResourceManager`进程，这是因为YARN的作用正是负责资源管理与任务调度。
+也可以通过 Web 界面查看任务的运行情况：http://localhost:8088/
