@@ -1,9 +1,9 @@
 # hadoop-on-CentOS
 文档中所有安装包均已提前下载，一切CentOS系统内操作都在root用户下进行
 ## 目录
-[下载并安装VMware](## 下载并安装VMware)
+[VMware](## VMware)
 
-## 下载并安装VMware
+## VMware
 
 ## 使用镜像文件在VMware上开启虚拟机（CentOS7）
 
