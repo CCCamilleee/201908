@@ -1,4 +1,4 @@
-# hadoop-on-CentOS
+# Hadoop-on-CentOS
 文档中所有安装包均已提前下载，一切CentOS系统内操作都在root用户下进行
 
 ## 安装VMware
@@ -129,3 +129,39 @@ python	1
 unix	1
 windows	1
 ```
+
+### Hadoop伪分布式配置
+
+- 设置ssh免密登录
+   - 生成秘钥，过程中需要输入的地方都按回车键
+   ```
+   # ssh-keygen -t rsa
+   ```
+   - 生成授权文件，加载生成的秘钥
+   ```
+   # ssh-copy-id root@localhost
+   ```
+   - 测试授权是否成功，如不需要输入密码即证明成功
+   ```
+   # ssh localhost date
+   Fri Aug  2 19:58:20 CST 2019
+   ```
+- 配置核心站点文件
+   - 用`vim`打开核心站点文件
+   ```
+   # vim /usr/local/hadoop/etc/hadoop/core-site.xml
+   ```
+   - 把
+   ```xml
+    <configuration>
+    </configuration>
+   ```
+   修改为
+   ```xml
+   <configuration>
+      <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000</value>
+      </property>
+   </configuration>
+   ```
