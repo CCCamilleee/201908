@@ -160,8 +160,8 @@ windows	1
    ```xml
    <configuration>
       <property>
-        <name>fs.defaultFS</name>
-        <value>hdfs://localhost:9000</value>
-      </property>
+         <name>fs.defaultFS</name>
+         <value>hdfs://localhost:9000</value>
+      </property>
    </configuration>
    ```
