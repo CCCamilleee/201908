@@ -23,7 +23,7 @@ $ mv jdk-8u60-linux-x64.tar.gz /soft
 ```
 $ tar -xzf jdk-8u60-linux-x64.tar.gz -C /usr/local
 ```
-   -- 将安装文件夹改名为`jdk8`
+   - 将安装文件夹改名为`jdk8`
 ```
 $ cd /usr/local
 $ mv jdk1.8.0_60/ jdk8
