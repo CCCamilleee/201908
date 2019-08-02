@@ -1,9 +1,7 @@
 # hadoop-on-CentOS
 文档中所有安装包均已提前下载，一切CentOS系统内操作都在root用户下进行
-## 目录
-[VMware](## VMware)
 
-## VMware
+## 安装VMware
 
 ## 使用镜像文件在VMware上开启虚拟机（CentOS7）
 
@@ -100,3 +98,34 @@
 # vim /usr/local/hadoop/etc/hadoop/hadoop-env.sh
 ```
 如显示有`export JAVA_HOME=/usr/local/jdk8`则没有问题，否则需要添加
+
+### Hadoop单机配置
+Hadoop 默认模式为非分布式模式，无需进行其他配置即可运行，此处运行一个实例
+
+- 创建测试目录
+```
+# mkdir -p /bigdata/test1
+```
+- 在该目录下创建三个测试文件
+```
+# cd /bigdata/test1
+# echo "java python java linux" >> data1.txt
+# echo "java linux oracle" >> data2.txt
+# echo "linux mysql python" >> data3.txt
+```
+- 统计文件中单词个数，并存入文件夹`test2`中
+```
+# hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.3.jar wordcount /bigdata/test1/ /bigdata/test2
+```
+- 检查结果
+```
+# cd /bigdata/test2
+# cat part-r-00000
+java	1
+linux	2
+mysql	1
+pwd	1
+python	1
+unix	1
+windows	1
+```
