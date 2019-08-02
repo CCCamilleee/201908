@@ -279,3 +279,9 @@ java    19898 root  183u  IPv4  83213      0t0  TCP *:50070 (LISTEN)
 ```
 可以看到比未开启YARN的时候多出了`NodeManager`和`ResourceManager`进程，这是因为YARN的作用正是负责资源管理与任务调度。
 也可以通过 Web 界面查看任务的运行情况：http://localhost:8088/
+
+- 停止进程
+```
+# stop-yarn.sh
+# stop-dfs.sh
+```
