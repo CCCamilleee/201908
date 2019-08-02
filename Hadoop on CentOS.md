@@ -72,9 +72,29 @@
    # mv hadoop-2.7.3/ hadoop
    ```
 - 配置hadoop环境变量
-   - 检查hadoop配置文件中的java路径是否存在
+   - 打开`/etc/profile`文件进行编辑
    ```
-   # vim /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+   # vim /etc/profile
    ```
-   如显示有`export JAVA_HOME=/usr/local/jdk8`则没有问题，否则需要添加
-   - 
+   - 通过键盘按键`i`进入编辑模式，将文件末尾修改为
+   ```
+   export JAVA_HOME=/usr/local/jdk8
+   export CLASSPATH=$JAVA_HOME/lib:.
+   export HADOOP_HOME=/usr/local/hadoop
+   export PATH=$JAVA_HOME/bin:.:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
+   ```
+   - 编辑结束后，通过键盘按键`esc`退出编辑模式，输入`:wq`保存并退出  
+   - 使环境变量立即生效（或通过重启虚拟机使之生效）
+   ```
+   # . /etc/profile
+   ```
+   - 检查环境变量是否配置完成
+   ```
+   # which hadoop
+   /usr/local/hadoop/bin/hadoop
+   ```
+- 检查hadoop配置文件中的java路径是否存在
+```
+# vim /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+```
+如显示有`export JAVA_HOME=/usr/local/jdk8`则没有问题，否则需要添加
