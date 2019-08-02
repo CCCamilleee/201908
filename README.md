@@ -19,26 +19,24 @@ $ cd ~/Desktop
 $ mv jdk-8u60-linux-x64.tar.gz /soft
 ```
 - 安装  
-
-      将安装包解压至`/usr/local`路径下
+   将安装包解压至`/usr/local`路径下
 ```
 $ tar -xzf jdk-8u60-linux-x64.tar.gz -C /usr/local
 ```
-      将安装文件夹改名为`jdk8`
+   将安装文件夹改名为`jdk8`
 ```
 $ cd /usr/local
 $ mv jdk1.8.0_60/ jdk8
 ```
 - 配置JAVA环境变量
-
-      打开`/etc/profile`文件进行编辑
+   打开`/etc/profile`文件进行编辑
 ```
 $ vim /etc/profile
 ```
-      通过键盘按键`i`进入编辑模式，在文件末尾添加
+   通过键盘按键`i`进入编辑模式，在文件末尾添加
 ```
 export JAVA_HOME=/usr/local/jdk8
 export CLASSPATH=$JAVA_HOME/lib:.
 export PATH=$JAVA_HOME/bin:.:$PATH
 ```
-      编辑结束后，通过键盘按键`esc`退出编辑模式，输入`:wq`保存并退出  
+   编辑结束后，通过键盘按键`esc`退出编辑模式，输入`:wq`保存并退出  
