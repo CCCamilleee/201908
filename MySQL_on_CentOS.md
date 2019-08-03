@@ -2,7 +2,7 @@
 目前 CentOS 下默认支持的数据库是 MariaDB，MariaDB 是 MySQL 的增强版本，由于 MySQL 被 Oracle 收购，Mysql 的开发者担心 MySQL 会变成闭源软件，因此开发了这个数据库版本。MariaDB 支持 MySQL 的所有功能，还增加了一些 MySQL 没有的功能。
 ## 准备工作
 ### 打开网络连接
-- 查看网络连接是否打开
+- 查看网络连接是否打开   
   虚拟机的默认网络连接是关闭的，在命令窗口中输入以下命令，网卡`ens33`只会显示 MAC 地址而没有 ip 地址
   ```
   # ifconfig
@@ -26,7 +26,7 @@
   ```
   # service network restart
   ```
-  - 重新查看网络连接是否打开
+  - 重新查看网络连接是否打开   
     发现网卡`ens33`显示 ip 地址
     ```
     # ifconfig
