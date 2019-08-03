@@ -97,4 +97,26 @@
 # yum -y install mysql
 # yum -y install mariadb
 # yum -y install mariadb-server
-``
+```
+
+## 配置数据库
+```
+# systemctl start mariadb //开启数据库服务器
+# systemctl enable mariadb //设置开机自动启动
+Created symlink from /etc/systemd/system/multi-user.target.wants/mariadb.service to /usr/lib/systemd/system/mariadb.service.
+# mysql_secure_installation //数据库初始化
+```
+在数据库初始化过程中需要进行以下操作：
+- `Enter current password for root (enter for none): `直接回车
+- `Set root password? [Y/n]` y
+- `New password: `输入自己想设置的密码，此处设置为`root`
+- `Re-enter new password: `重新输入密码
+- `Remove anonymous users? [Y/n]` y
+- `Disallow root login remotely? [Y/n]` n
+- `Remove test database and access to it? [Y/n]` y
+- `Reload privilege tables now? [Y/n]` y
+
+设置完成后可以使用以下命令进入数据库
+```
+# mysql -uroot -pxxx  //xxx为初始化时设置的密码
+```
