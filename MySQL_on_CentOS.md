@@ -39,3 +39,17 @@
         TX packets 116  bytes 13311 (12.9 KiB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
     ```
+  - `ping`百度检查网络连接
+    ```shel
+    # ping -c 4 www.baidu.com
+    PING www.a.shifen.com (61.135.169.125) 56(84) bytes of data.
+    64 bytes from 61.135.169.125 (61.135.169.125): icmp_seq=1 ttl=128 time=49.3 ms
+    64 bytes from 61.135.169.125 (61.135.169.125): icmp_seq=2 ttl=128 time=120 ms
+    64 bytes from 61.135.169.125 (61.135.169.125): icmp_seq=3 ttl=128 time=36.8 ms
+    64 bytes from 61.135.169.125 (61.135.169.125): icmp_seq=4 ttl=128 time=118 ms
+
+    --- www.a.shifen.com ping statistics ---
+    4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+    rtt min/avg/max/mdev = 36.803/81.235/120.280/38.441 ms
+    ```
+
