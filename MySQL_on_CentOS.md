@@ -54,7 +54,7 @@
     4 packets transmitted, 4 received, 0% packet loss, time 3005ms
     rtt min/avg/max/mdev = 36.803/81.235/120.280/38.441 ms
     ```
-- 关闭防火墙
+### 关闭防火墙
   - 防火墙1
     ```
     # systemctl stop firewalld //临时关闭防火墙
@@ -74,3 +74,27 @@
     # vim /etc/sysconfig/selinux
     ```
     把`SELINUX=enforcing`改为`SELINUX=disable`
+
+## 通过yum方式安装数据库
+### 安装yum阿里云镜像源
+- 备份
+```
+# cd /etc/yum.repos.d/
+# mkdir -p /repos
+# mv ./*.repo /repos/
+```
+- 拷贝新的仓库文件到当前目录下（仓库文件已事先放入`/soft`文件夹中，可以在此项目的`soft`文件夹中找到）
+```
+# cp /soft/CentOS-Aliyun.repo .
+```
+- 生成新的缓存
+```
+# yum clean all
+# yum makecache
+```
+### 安装数据库
+```
+# yum -y install mysql
+# yum -y install mariadb
+# yum -y install mariadb-server
+``
