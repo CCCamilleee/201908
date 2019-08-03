@@ -1,0 +1,10 @@
+# Web server on Centos
+
+## 安装Apache
+  ```
+  # yum -y install httpd
+  # systemctl start httpd
+  # cd /var/www/html/
+  # vim echarts1.html
+  ```
+
