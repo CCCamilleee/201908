@@ -150,6 +150,7 @@ scala>
 - 查看修改的变量是否生效
   ```
   # sqoop help
+  // warning 太长就不贴了
   Available commands:
   codegen            Generate code to interact with database records
   create-hive-table  Import a table definition into Hive
@@ -179,8 +180,20 @@ scala>
   ```
   # cd /soft
   # cp /soft/mysql-connector-java-5.1.7-bin.jar /usr/local/sqoop/lib/
-  # 
   ```
+- 检查安装
+  ```
+  # sqoop list-databases --connect jdbc:mysql://localhost:3306 --username root --password root123
+  // warning 太长就不贴了
+  19/08/05 10:09:51 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7
+  19/08/05 10:09:51 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+  19/08/05 10:09:51 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+  information_schema
+  mysql
+  openstack
+  performance_schema
+  pythondb
 
+  ```
 
 
