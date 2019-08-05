@@ -250,4 +250,14 @@ scala>
 MariaDB [(none)]> create database hive;
 MariaDB [(none)]> grant all privileges on hive.* to 'hive'@'localhost' identified by 'root' with grant option;
 MariaDB [(none)]> grant all privileges on hive.* to 'hive'@'%' identified by 'root' with grant option;
+MariaDB [(none)]> exit
+Bye
+
+// 用 Hive 用户登录
+# mysql -uhive -proot
+MariaDB [(none)]>
+// 登录成功
 ```
+
+#### 初始化 Hive 数据
+
