@@ -260,4 +260,8 @@ MariaDB [(none)]>
 ```
 
 #### 初始化 Hive 数据
-
+```
+# cp /soft/mysql-connector-java-5.1.7-bin.jar /usr/local/hive/lib/
+# cd /usr/local/hive/bin/
+# ./schematool -initSchema -verbose -dbType mysql
+```
