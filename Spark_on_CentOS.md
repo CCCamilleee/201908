@@ -57,8 +57,8 @@ localhost: starting org.apache.spark.deploy.worker.Worker, logging to /usr/local
   ```
   # vim /etc/profile
   ```
-- 添加环境变量：`export SPARK_HOME=/usr/local/spark`
-  在`export PATH=$JAVA_HOME/bin:.:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH`中添加两条路径，变为：
+- 添加环境变量：`export SPARK_HOME=/usr/local/spark`   
+  在`export PATH=$JAVA_HOME/bin:.:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH`中添加两条路径，变为：   
   `export PATH=$SPARK_HOME/bin:$SPARK_HOME/sbin:$JAVA_HOME/bin:.:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH`
 
 
