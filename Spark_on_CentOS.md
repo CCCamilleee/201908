@@ -61,5 +61,14 @@ localhost: starting org.apache.spark.deploy.worker.Worker, logging to /usr/local
   在`export PATH=$JAVA_HOME/bin:.:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH`中添加两条路径，变为：   
   `export PATH=$SPARK_HOME/bin:$SPARK_HOME/sbin:$JAVA_HOME/bin:.:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH`
 
+- 使修改的环境变量立刻生效
+  ```
+  # . /etc/profile
+  ```
 
+## 运行检验修改的环境变量
+
+```
+# spark-shell
+```
     
