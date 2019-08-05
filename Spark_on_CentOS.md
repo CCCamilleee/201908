@@ -94,4 +94,17 @@ Type :help for more information.
 
 scala> 
 ```
-    
+在新的命令窗口中查看进程
+```
+# jps
+18850 SecondaryNameNode
+19126 NodeManager
+19032 ResourceManager
+21771 SparkSubmit
+18556 NameNode
+21117 Worker
+18655 DataNode
+21039 Master
+21919 Jps
+```
+
