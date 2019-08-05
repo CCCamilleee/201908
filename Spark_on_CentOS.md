@@ -128,4 +128,11 @@ scala>
   # cp sqoop-env-template.sh sqoop-env.sh
   ```
 - 修改配置文件
+  ```
+  # vim sqoop-env.sh
+  ```
+  添加`JAVA_HOME=/usr/local/jdk8`   
+  修改23行的`#export HADOOP_COMMON_HOME`为`export HADOOP_COMMON_HOME=/usr/local/hadoop`   
+  修改26行的`#export HADOOP_MAPRED_HOME`为`export HADOOP_MAPRED_HOME=/usr/local/hadoop/share/hadoop/mapreduce`
+  
   
