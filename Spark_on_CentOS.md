@@ -208,5 +208,46 @@ scala>
   // 发现一个数据表 emp
   ```
   
+## 安装 Hive 工具
 
+#### 安装
+- 把安装包从当前目录`～/Desktop`放到`/soft`目录下
+  ```
+  # mv ~/Desktop/apache-hive-2.1.1-bin.tar.gz /soft
+  ```
+- 解压并修改名称
+  ```
+  # cd /soft
+  # tar -xzf apache-hive-2.1.1-bin.tar.gz -C /usr/local/
+  # cd /usr/local
+  # mv apache-hive-2.1.1-bin.tar.gz/ hive
+  ```
+#### 修改配置文件
+- 把两个配置文件从`/soft`文件夹下复制到`hive`的配置文件夹路径下
+  ```
+  # cd /soft
+  # cp hive* /usr/local/hive/conf/
+  ```
+- 修改配置文件`hive-env.sh`
+  ```
+  # vim hive-env.sh
+  ```
+  - 把48行的`HADOOP_HOME=/usr/local/hadoop/hadoop/hadoop`改为`HADOOP_HOME=/usr/local/hadoop`
+  - 把51行的`export HIVE_CONF_DIR=/usr/local/hadoop/hive/conf`改为`export HIVE_CONF_DIR=/usr/local/hive/conf`
+  - 把54行的`export HIVE_AUX_JARS_PATH=/usr/local/hadoop/hive/lib`改为`export HIVE_AUX_JARS_PATH=/usr/local/hive/lib`
+  
+- 修改配置文件`hive-site.xml`
+  ```
+  # vim hive-site.xml
+  ```
+  - 把15行的`jdbc:mysql://server2:3306/hive`改为`jdbc:mysql://localhost:3306/hive`
+  - 把48行的`thrift://server2:9083`改为`thrift://localhost:9083`
+  
+#### 进入数据库建立用于连接 Hive 的用户
 
+```
+# mysql -uroot -proot123  // -u后输入自己的数据库用户名； -p后输入自己的数据库密码
+MariaDB [(none)]> create database hive;
+MariaDB [(none)]> grant all privileges on hive.* to 'hive'@'localhost' identified by 'root' with grant option;
+MariaDB [(none)]> grant all privileges on hive.* to 'hive'@'%' identified by 'root' with grant option;
+```
