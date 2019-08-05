@@ -13,3 +13,12 @@
   # cd /usr/local
   # mv spark-2.2.0-bin-hadoop2.7/ spark
   ```
+
+- 修改配置——把模板拷贝为真实文件
+  ```
+  # cd /usr/local/spark/conf/
+  # cp spark-env.sh.template spark-env.sh
+  # cp slaves.template slaves
+  # cp spark-defaults.conf.template spark-defaults.conf
+  # cp log4j.properties.template log4j.properties
+  ```
