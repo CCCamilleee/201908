@@ -181,9 +181,10 @@ scala>
   # cd /soft
   # cp /soft/mysql-connector-java-5.1.7-bin.jar /usr/local/sqoop/lib/
   ```
-- 检查安装
+- 通过 sqoop 查看数据库`databases`
   ```
   # sqoop list-databases --connect jdbc:mysql://localhost:3306 --username root --password root123
+  // --password后面是自己的数据库密码
   // warning 太长就不贴了
   19/08/05 10:09:51 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7
   19/08/05 10:09:51 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
@@ -193,7 +194,19 @@ scala>
   openstack
   performance_schema
   pythondb
-
   ```
+- 通过 sqoop 查看数据表 `tables`
+  ```
+  # sqoop list-tables --connect jdbc:mysql://localhost:3306/openstack --username root --password root123
+  // 查看数据库 openstack 下的数据表
+  // --password后面是自己的数据库密码
+  // warning 太长就不贴了
+  19/08/05 10:15:27 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7
+  19/08/05 10:15:27 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+  19/08/05 10:15:27 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+  emp
+  // 发现一个数据表 emp
+  ```
+  
 
 
