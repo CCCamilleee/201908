@@ -200,7 +200,7 @@ windows	1
 20180 SecondaryNameNode
 19898 NameNode
 ```
-成功启动后，可以访问 Web 界面 http://localhost:50070 查看 NameNode 和 Datanode 信息，还可以在线查看 HDFS 中的文件。
+成功启动后，可以访问 Web 界面 http://localhost:50070 查看 NameNode 和 Datanode 信息（如果要展示项目运行状况，直接展示50070端口情况更为直观），还可以在线查看 HDFS 中的文件。
 或通过以下命令查看端口情况
 ```
 # lsof -i:9000
