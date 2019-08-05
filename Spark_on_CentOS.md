@@ -70,5 +70,28 @@ localhost: starting org.apache.spark.deploy.worker.Worker, logging to /usr/local
 
 ```
 # spark-shell
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+19/08/05 08:58:28 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/08/05 08:58:28 WARN Utils: Your hostname, localhost resolves to a loopback address: 127.0.0.1; using 172.16.215.128 instead (on interface ens33)
+19/08/05 08:58:28 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+19/08/05 08:58:38 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 1.2.0
+19/08/05 08:58:39 WARN ObjectStore: Failed to get database default, returning NoSuchObjectException
+19/08/05 08:58:39 WARN ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+Spark context Web UI available at http://172.16.215.128:4040
+Spark context available as 'sc' (master = local[*], app id = local-1564966709515).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 2.2.0
+      /_/
+         
+Using Scala version 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_60)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala> 
 ```
     
