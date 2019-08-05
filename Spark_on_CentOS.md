@@ -15,7 +15,7 @@
   # mv spark-2.2.0-bin-hadoop2.7/ spark
   ```
 
-- 把配置模板拷贝为真实文件
+- 把配置模板拷贝为正式文件
     ```
     # cd /usr/local/spark/conf/
     # cp spark-env.sh.template spark-env.sh
@@ -122,4 +122,10 @@ scala>
   # cd /usr/local
   # mv sqoop-1.4.7.bin__hadoop-2.6.0/ sqoop
   ```
+- 把配置模板拷贝为真实文件
+  ```
+  # cd sqoop/conf
+  # cp sqoop-env-template.sh sqoop-env.sh
+  ```
+- 修改配置文件
   
