@@ -135,7 +135,7 @@ scala>
   修改23行的`#export HADOOP_COMMON_HOME`为`export HADOOP_COMMON_HOME=/usr/local/hadoop`   
   修改26行的`#export HADOOP_MAPRED_HOME`为`export HADOOP_MAPRED_HOME=/usr/local/hadoop/share/hadoop/mapreduce`
   
-### 修改环境变量
+#### 修改环境变量
 - 打开环境变量文件
   ```
   vim /etc/profile
@@ -167,6 +167,19 @@ scala>
   version            Display version information
 
   See 'sqoop help COMMAND' for information on a specific command.
+  ```
+
+## 安装sqoop与数据库的连接工具
+
+- 把安装包从当前目录`～/Desktop`放到`/soft`目录下
+  ```
+  # mv ~/Desktop/mysql-connector-java-5.1.7-bin.jar /soft
+  ```
+- 安装工具到 sqoop 库目录下
+  ```
+  # cd /soft
+  # cp /soft/mysql-connector-java-5.1.7-bin.jar /usr/local/sqoop/lib/
+  # 
   ```
 
 
