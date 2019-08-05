@@ -135,9 +135,22 @@ scala>
   修改23行的`#export HADOOP_COMMON_HOME`为`export HADOOP_COMMON_HOME=/usr/local/hadoop`   
   修改26行的`#export HADOOP_MAPRED_HOME`为`export HADOOP_MAPRED_HOME=/usr/local/hadoop/share/hadoop/mapreduce`
   
-## 修改环境变量
-```
-vim /etc/profile
-```
-添加：`export SQOOP_HOME=/usr/local/sqoop`   
-在最后一行的路径中添加：`$SQOOP_HOME/bin:`，改为：`export PATH=$SQOOP_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$JAVA_HOME/bin:.:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH`
+### 修改环境变量
+- 打开环境变量文件
+  ```
+  vim /etc/profile
+  ```
+- 添加：`export SQOOP_HOME=/usr/local/sqoop`   
+  在最后一行的路径中添加：`$SQOOP_HOME/bin:`，改为：`export PATH=$SQOOP_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$JAVA_HOME/bin:.:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH`
+
+- 使修改的环境变量立刻生效
+  ```
+  # . /etc/profile
+  ```
+- 查看修改的变量是否生效
+  ```
+  # sqoop help
+  ```
+
+
+
