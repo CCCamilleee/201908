@@ -9,6 +9,7 @@
   
 - 解压并修改名称
   ```
+  # cd /soft
   # tar -xzf spark-2.2.0-bin-hadoop2.7.tgz -C /usr/local/
   # cd /usr/local
   # mv spark-2.2.0-bin-hadoop2.7/ spark
@@ -108,3 +109,17 @@ scala>
 21919 Jps
 ```
 
+## 安装工具 sqoop
+
+- 把安装包从当前目录`～/Desktop`放到`/soft`目录下
+  ```
+  mv sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz /soft
+  ```
+- 解压并修改名称
+  ```
+  # cd /soft
+  # tar -xzf sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz -C /usr/local/
+  # cd /usr/local
+  # mv sqoop-1.4.7.bin__hadoop-2.6.0/ sqoop
+  ```
+  
