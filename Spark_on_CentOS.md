@@ -40,7 +40,26 @@
 # /usr/local/spark/sbin/start-all.sh
 starting org.apache.spark.deploy.master.Master, logging to /usr/local/spark/logs/spark-root-org.apache.spark.deploy.master.Master-1-localhost.out
 localhost: starting org.apache.spark.deploy.worker.Worker, logging to /usr/local/spark/logs/spark-root-org.apache.spark.deploy.worker.Worker-1-localhost.out
+# jps
+21185 Jps
+18850 SecondaryNameNode
+19126 NodeManager
+19032 ResourceManager
+18556 NameNode
+21117 Worker
+18655 DataNode
+21039 Master
 ```
+
+## 修改环境变量
+
+- 打开环境变量文件
+  ```
+  # vim /etc/profile
+  ```
+- 添加环境变量：`export SPARK_HOME=/usr/local/spark`
+  在`export PATH=$JAVA_HOME/bin:.:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH`中添加两条路径，变为：
+  `export PATH=$SPARK_HOME/bin:$SPARK_HOME/sbin:$JAVA_HOME/bin:.:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH`
 
 
     
