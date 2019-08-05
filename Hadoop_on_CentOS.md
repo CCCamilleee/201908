@@ -281,3 +281,23 @@ java    19898 root  183u  IPv4  83213      0t0  TCP *:50070 (LISTEN)
 # stop-yarn.sh
 # stop-dfs.sh
 ```
+
+## Hadoop 简单使用
+
+- 在 hadoop 服务器上新建文件夹`python`并查看
+   ```
+   # hdfs dfs -mkdir /python
+   # hdfs dfs -ls /
+   19/08/05 08:22:10 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java      classes where applicable
+   Found 1 items
+   drwxr-xr-x   - root supergroup          0 2019-08-05 08:17 /python
+   ```
+ - 把`/soft`文件夹内的本地文件上传到 hadoop 服务器上并查看
+   ```
+   # hdfs dfs -put /soft/test1.py /python
+   # hdfs dfs -ls /python
+   19/08/05 08:22:33 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+   Found 1 items
+   -rw-r--r--   1 root supergroup         40 2019-08-05 08:22 /python/test1.py
+   ```
+
