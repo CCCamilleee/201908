@@ -241,7 +241,7 @@ scala>
   # vim hive-site.xml
   ```
   - 把15行的`jdbc:mysql://server2:3306/hive`改为`jdbc:mysql://localhost:3306/hive`
-  - 把48行的`thrift://server2:9083`改为`thrift://localhost:9083`
+  - 把37行的`thrift://server1:9083`改为`thrift://localhost:9083`
   
 #### 进入数据库建立用于连接 Hive 的用户
 
