@@ -1,1 +1,17 @@
-
+B2I_Age&Product_33      --年龄-产品关联数据
+B2I_AgeGroup&Product_33 --年龄段-产品关联数据
+B2I_AgeGroup&Trans_33   --年龄段-最终用户转化
+B2I_Area&Order_33       --地域-订单数关联
+B2I_Area&Product_33     --地域-产品关联
+B2I_Area&Product_Region --地域(县分)-产品关联（学习预测使用）
+B2I_Area&Trans_33       --市级-最终用户转化
+B2I_AreaCity&Trans_33   --市级-最终用户转化（7、8一样的数据）
+B2I_AreaRegion&Trans_33 --县分-最终用户转化
+B2I_Day&Order_33        --天-订单数目
+B2I_Month&Order_33      --月份-订单数目
+B2I_Product&Trans_33    --产品-最终用户转化
+B2I_Sex&Product_33      --性别-产品
+B2I_Sex&Trans_33        --性别-最终用户转化
+B2I_User&Product_Female --用户特征-产品（女性）（学习预测使用）
+B2I_User&Product_Male   --用户特征-产品（男性）（学习预测使用）
+B2I_UserArea&Product_33 --用户地区-产品（学习预测使用）
