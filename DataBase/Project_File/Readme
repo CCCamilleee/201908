@@ -1,1 +1,10 @@
+1.DB_CREATE   --数据库建库脚本
+2.DB_DIVIDE   --数据库分层/建表/各层服务脚本
+3.DB_INIT     --数据库表单初始化脚本
+4.Output      --数据库输出数据csv
+5.SourceData  --数据库源文件
 
+6.DB_AreaEncode.xlsx           --数据库地域字段编码
+7.DB_Encode(except_Area).xlsx  --数据库字段编码（除地域字段外）
+8.Mapping.xlsx                 --数据库表结构/关联文件
+9.摸鱼需求内容3.0.docx          --需求文档
