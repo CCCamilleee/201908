@@ -1,1 +1,6 @@
+DML_Operate.py   --数据库操作接口(包含了后面四个文件）
+DML_UPDATE.py    --数据库更新操作接口（传入字段参数/FieldValue为字典类型）
+DML_DELETE.py    --数据库删除操作接口（DELETE请不要乱调用，默认参数是整个表清空）
+DML_INSERT.py    --数据库新增操作接口（传入字段/Field为列表类型、数据/Data为列表类型）
+DML_SELECT.py    --数据库查询接口操作（传入字段/Field为列表类型）
 
